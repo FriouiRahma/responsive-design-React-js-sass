@@ -1,0 +1,61 @@
+.wrapper-nav {
+    background-color: #242726;
+
+    @include media-breakpoint-up(lg) {
+        background-color: $color-white;
+    }
+
+    .navbar-items {
+        display: flex;
+        height: 80px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .LogoAleia {
+            width: 158px;
+            height: 63px;
+        }
+
+        .nav-menu {
+            display: none;
+
+            @include media-breakpoint-up(lg) {
+                display: flex;
+                list-style: none;
+                justify-content: space-between;
+                width: 80%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav-links {
+                color: $color-black;
+                text-decoration: none;
+                font-family: 'Open Sans';
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 21.79px;
+                padding: 15px 25px;
+
+                &.active {
+                    background-image: linear-gradient(47.99deg, #2E8174 0%, #30A996 42.53%, #00FFD9 100%);
+                    border-radius: 15px;
+                    width: 128px;
+                    height: 52px;
+                }
+            }
+        }
+
+        .menu {
+            display: block;
+            width: 50px;
+            height: 33px;
+
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+        }
+    }
+}
